@@ -1,5 +1,6 @@
 import React from 'react';
 import Button, { ButtonSize, ButtonType } from './components/Button/button';
+import Input from './components/Input/input';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Button btnType={ButtonType.Danger} size={ButtonSize.Large}>hello</Button>
       <Button btnType={ButtonType.Link} href='http://www.baidu.com' target="_blank">baidu</Button>
       <Button btnType={ButtonType.Link} href='http:www.baidu.com'>baidu</Button>
+      <Input></Input>
     </div>
   );
 }
