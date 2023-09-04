@@ -5,6 +5,9 @@ import Input from './components/Input/input';
 function App() {
   return (
     <div className="App">
+      <h1>hello world</h1>
+      <h2>hello world</h2>
+      <h3>hello world</h3>
       <Button className='yes'>hello</Button>
       <Button disabled> Disabled Button </Button>
       <Button autoFocus onClick={() => alert(1)} btnType={ButtonType.Primary} size={ButtonSize.Small} >hello</Button>
