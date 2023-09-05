@@ -1,18 +1,16 @@
-import { Meta } from '@storybook/addon-docs';
-
 <Meta title="Welcome" />
 
 # 使用 React+typescript 从零到一打造一套组件库
 ### 安装
 ~~~javascript
-npm install freemyui --save
+npm install freeui --save
 ~~~
 ### 使用
 ~~~javascript
 // 加载样式
-import 'freemyui/dist/index.css'
+import 'freeui/dist/index.css'
 // 引入组件
-import { Button } from 'freemyui'
+import { Button } from 'freeui'
 ~~~
 ###  相关技术
 * 🔥typescript with React Hooks
