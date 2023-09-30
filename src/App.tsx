@@ -3,7 +3,10 @@ import Button, { ButtonSize, ButtonType } from './components/Button/button';
 import Input from './components/Input/input';
 import Menu from './components/Menu/menu';
 import MenuItem from './components/Menu/menuItem'
-
+import Icon from './components/Icon/icon';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons'
+library.add(fas)
 function App() {
   return (
     <div className="App">
@@ -26,6 +29,7 @@ function App() {
           cool link 3
         </MenuItem>
       </Menu>
+      <Icon icon="arrow-down" theme="primary" size="10x" />
     </div>
   );
 }
