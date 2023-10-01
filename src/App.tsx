@@ -1,6 +1,6 @@
 import React from 'react';
 import Button, { ButtonSize, ButtonType } from './components/Button/button';
-import Input from './components/Input/input';
+import Input, { InputSize } from './components/Input/input';
 import Menu from './components/Menu/menu';
 import MenuItem from './components/Menu/menuItem'
 import SubMenu from './components/Menu/subMenu';
@@ -17,7 +17,7 @@ function App() {
       <Button btnType={ButtonType.Danger} size={ButtonSize.Large}>hello</Button>
       <Button btnType={ButtonType.Link} href='http://www.baidu.com' target="_blank">baidu</Button>
       <Button btnType={ButtonType.Link} href='http:www.baidu.com'>baidu</Button>
-      <Input></Input>
+      <Input disabled={true} ></Input>
 
       <Menu defaultOpenSubMenus={['1']} mode="vertical">
         <MenuItem>
