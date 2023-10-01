@@ -4,25 +4,25 @@ import Menu, { MenuProps } from "./menu";
 import MenuItem from "./menuItem";
 
 const testProps: MenuProps = {
-    defaultIndex: 0,
+    defaultIndex: '0',
     onSelect: jest.fn(),
     className: 'test',
 }
 
 const testVerProps: MenuProps = {
-    defaultIndex: 0,
+    defaultIndex: '0',
     mode: 'vertical'
 }
 const gennerateMenu = (props: MenuProps) => {
     return (
         <Menu {...props}>
-            <MenuItem index={0}>
+            <MenuItem >
                 active
             </MenuItem>
-            <MenuItem disabled index={1}>
+            <MenuItem disabled >
                 disabled
             </MenuItem>
-            <MenuItem index={2}>
+            <MenuItem >
                 xyz
             </MenuItem>
         </Menu>

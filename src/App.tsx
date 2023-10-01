@@ -3,6 +3,7 @@ import Button, { ButtonSize, ButtonType } from './components/Button/button';
 import Input from './components/Input/input';
 import Menu from './components/Menu/menu';
 import MenuItem from './components/Menu/menuItem'
+import SubMenu from './components/Menu/subMenu';
 import Icon from './components/Icon/icon';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons'
@@ -18,16 +19,25 @@ function App() {
       <Button btnType={ButtonType.Link} href='http:www.baidu.com'>baidu</Button>
       <Input></Input>
 
-      <Menu defaultIndex={0} >
-        <MenuItem index={1}>
-          cool link
+      <Menu defaultOpenSubMenus={['1']} mode="vertical">
+        <MenuItem>
+          link1
         </MenuItem>
-        <MenuItem index={2} disabled={true}>
-          cool link 2
+        <MenuItem disabled>
+          link2
         </MenuItem>
-        <MenuItem index={3}>
-          cool link 3
+        <SubMenu title='副菜单'>
+          <MenuItem>
+            标题1
+          </MenuItem>
+          <MenuItem>
+            标题2
+          </MenuItem>
+        </SubMenu>
+        <MenuItem>
+          link3
         </MenuItem>
+        {/* <li>2</li> */}
       </Menu>
       <Icon icon="arrow-down" theme="primary" size="10x" />
     </div>
