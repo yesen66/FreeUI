@@ -1,30 +1,28 @@
 import React from 'react';
 import Button, { ButtonSize, ButtonType } from './components/Button/button';
-import Input, { InputSize } from './components/Input/input';
+import Input from './components/Input/input';
 import Menu from './components/Menu/menu';
 import MenuItem from './components/Menu/menuItem'
 import SubMenu from './components/Menu/subMenu';
-import Icon from './components/Icon/icon';
-import AutoComplete from './components/AutoComplete/autoComplete';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons'
 library.add(fas)
 
 
 function App() {
-  const lakes = [
-    'bradley', 'pope', 'caruso', 'cook', 'cousins',
-    'jams', 'AD', 'green', 'howard', 'kuzma', 'McGee', 'rando'
-  ]
-  const handleFetch = (query: string) => {
-    return lakes.filter(name => name.includes(query))
-  }
+  // const lakes = [
+  //   'bradley', 'pope', 'caruso', 'cook', 'cousins',
+  //   'jams', 'AD', 'green', 'howard', 'kuzma', 'McGee', 'rando'
+  // ]
+  // const handleFetch = (query: string) => {
+  //   return lakes.filter(name => name.includes(query))
+  // }
 
   return (
     <div className="App">
-      <AutoComplete
+      {/* <AutoComplete
         fetchSuggestions={handleFetch}
-      />
+      /> */}
       <Button className='yes'>hello</Button>
       <Button disabled> Disabled Button </Button>
       <Button autoFocus onClick={() => alert(1)} btnType={ButtonType.Primary} size={ButtonSize.Small} >hello</Button>
