@@ -57,6 +57,7 @@ export const Input: FC<InputProps> = (props) => {
             <input
                 className="free-input-inner"
                 disabled={disabled}
+                value={props.value}
                 {...restProps}
             />
             {append && <div className="free-input-group-append">{append}</div>}

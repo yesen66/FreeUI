@@ -5,12 +5,26 @@ import Menu from './components/Menu/menu';
 import MenuItem from './components/Menu/menuItem'
 import SubMenu from './components/Menu/subMenu';
 import Icon from './components/Icon/icon';
+import AutoComplete from './components/AutoComplete/autoComplete';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons'
 library.add(fas)
+
+
 function App() {
+  const lakes = [
+    'bradley', 'pope', 'caruso', 'cook', 'cousins',
+    'jams', 'AD', 'green', 'howard', 'kuzma', 'McGee', 'rando'
+  ]
+  const handleFetch = (query: string) => {
+    return lakes.filter(name => name.includes(query))
+  }
+
   return (
     <div className="App">
+      <AutoComplete
+        fetchSuggestions={handleFetch}
+      />
       <Button className='yes'>hello</Button>
       <Button disabled> Disabled Button </Button>
       <Button autoFocus onClick={() => alert(1)} btnType={ButtonType.Primary} size={ButtonSize.Small} >hello</Button>
@@ -19,27 +33,25 @@ function App() {
       <Button btnType={ButtonType.Link} href='http:www.baidu.com'>baidu</Button>
       <Input disabled={true} ></Input>
 
-      <Menu defaultOpenSubMenus={['1']} mode="vertical">
+      <Menu defaultIndex='0'>
         <MenuItem>
-          link1
+          cool link
+        </MenuItem>
+        <MenuItem>
+          cool link 2
         </MenuItem>
         <MenuItem disabled>
-          link2
+          disabled
         </MenuItem>
-        <SubMenu title='副菜单'>
+        <SubMenu title="下拉选项">
           <MenuItem>
-            标题1
+            下拉选项一
           </MenuItem>
           <MenuItem>
-            标题2
+            下拉选项二
           </MenuItem>
         </SubMenu>
-        <MenuItem>
-          link3
-        </MenuItem>
-        {/* <li>2</li> */}
       </Menu>
-      <Icon icon="arrow-down" theme="primary" size="10x" />
     </div>
   );
 }
