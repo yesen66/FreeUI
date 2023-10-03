@@ -6,7 +6,7 @@ import Icon from '../Icon/icon'
 import { JSX } from 'react/jsx-runtime'
 
 export default {
-    title: '第十章：Upload',
+    title: 'Upload',
     id: 'Upload',
     component: Upload,
     parameters: {

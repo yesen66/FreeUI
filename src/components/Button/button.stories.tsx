@@ -4,7 +4,7 @@ import Button from "./button";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
 const buttonMeta: ComponentMeta<typeof Button> = {
-    title: '第四章：Button',
+    title: 'Button',
     component: Button,
 }
 
