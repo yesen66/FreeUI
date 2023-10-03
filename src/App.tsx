@@ -4,6 +4,7 @@ import Input from './components/Input/input';
 import Menu from './components/Menu/menu';
 import MenuItem from './components/Menu/menuItem'
 import SubMenu from './components/Menu/subMenu';
+import Alert, { AlertType } from './components/Alert/alert';
 import { Upload } from './components/Upload/upload';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons'
@@ -53,6 +54,29 @@ function App() {
       </Menu>
       <Upload
         action="https://jsonplaceholder.typicode.com/posts"
+      />
+      <Alert
+        title='123'
+        type={AlertType.Default}
+        className='myAlert'
+      />
+      <Alert
+        title='123'
+        type={AlertType.Warning}
+        className='myAlert'
+      />
+      <Alert
+        title='123'
+        type={AlertType.Success}
+        className='myAlert'
+        description='hah '
+      />
+      <Alert
+        title='124'
+        type={AlertType.Danger}
+        description='我的'
+        closable={true}
+        onClose={() => { console.log(1) }}
       />
     </div>
   );
